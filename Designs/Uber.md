@@ -44,4 +44,4 @@
 ## Architectural Diagram
 * Geo Service - show/search for a drivers for a riders location
 * Daspatch service - request a ride
-![This is an image](assets/uber.png)
+![This is an image](assets/uber.jpg)
