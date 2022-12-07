@@ -1,10 +1,10 @@
-# [Leaderless Replication](https://www.youtube.com/watch?v=atDe7qka6q8)
+# [**Leaderless Replication**](https://www.youtube.com/watch?v=atDe7qka6q8)
 
-## Overview:
+# Overview:
 * Any replica can accept writes from client
 * Send reads and writes to all nodes in parallel, once predefined threshold of nodes return a success value, the client told read/write was successful
 
-## Keep data up to date:
+# Keep data up to date:
 * **Anti-Entropy**:
     * Background process that looks at multiple nodes and their stored values, use version numbers to make sure each replica holds most up to date data
 * **Read Repair**:
@@ -22,9 +22,7 @@
     * Data can be asyncronosly written to **w** nodes to make a quorum, but fewer than **w** writes succeed. Client told write has been failed. But in reality some nodes dont undo write
     * If we restore node/s with old values, we might lose up to date values
     * Write conflicts
-        * 
     * Sloppy quorums
-        * 
 
 # Conclusion:
 * **Pros**:
