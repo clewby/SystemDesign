@@ -1,4 +1,4 @@
-# [ACID]()
+# [**ACID**]()
 
 ## Overview:
 * Any replica can accept writes from client

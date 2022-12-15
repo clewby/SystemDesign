@@ -1,4 +1,4 @@
-# [Rete Limiter Design](https://www.youtube.com/watch?v=MDH7xybVr8o)
+# [**Rate Limiter Design**](https://www.youtube.com/watch?v=MDH7xybVr8o)
 
 # Functional Requirements:
 * Limit entity to a certain amount of API requests over a given period of time
@@ -24,21 +24,21 @@
 * Two types of rate limiters:
     * Fixed Window
         * You can make a predefined number of requests per min/hour/day...
-        Dictionary<userId, (counter, timestamp)>
-        Key => userId   limit 2 requests per min
-            request1    (1, 12-01-15) - success at 12:01:15
-            request2    (2, 12-01-30) - success at 12:01:30
-            request3    (2, 12-01-45) - failed  at 12:01:45
-            request4    (1, 12-02-15) - success at 12:02:15
+        * Dictionary<userId, (counter, timestamp)>
+        * Key => userId   limit 2 requests per min
+            * request1    (1, 12-01-15) - success at 12:01:15
+            * request2    (2, 12-01-30) - success at 12:01:30
+            * request3    (2, 12-01-45) - failed  at 12:01:45
+            * request4    (1, 12-02-15) - success at 12:02:15
         * Redis updates value for a key in a singe thread, no concurency/racecondition issues should pop up
     * Rolling window
         * Predefined number of requests for a rolling time window
-        Dictionary<userId, LinkedList<TimeStamp>>
-        Key => userId   limit 2 requests per min
-        request1    [12-01-15] - success at 12:01:15
-        request2    [12-01-15, 12-01-30] - success at 12:01:30
-        request3    [12-01-15, 12-01-30] - failed  at 12:01:45
-        request4    [12-01-30, 12-02-20] - success at 12:02:20
+        * Dictionary<userId, LinkedList<TimeStamp>>
+        * Key => userId   limit 2 requests per min
+            * request1    [12-01-15] - success at 12:01:15
+            * request2    [12-01-15, 12-01-30] - success at 12:01:30
+            * request3    [12-01-15, 12-01-30] - failed  at 12:01:45
+            * request4    [12-01-30, 12-02-20] - success at 12:02:20
 * Rate Limiting based on:
     * User ID
     * IP address

@@ -1,11 +1,11 @@
 # [Design Uber](https://www.youtube.com/watch?v=CI4j-uo58nQ&t=127s)
 
-## Functional Requirements:
+# Functional Requirements:
 * See all the drivers/nearby cars and keep their locations up to date
 * When there is a match both passanger and driver should be able to see each others' updated location
 * Optimal route calculation with both time and distance numbers
 
-## NON Functional Requirements:
+# NON Functional Requirements:
 * Push location changes to backend every 3 seconds
 * 1 million active daily riders, 500k active daily drivers
 * 4 bytes for GeoHash, 4 bytes for lat and lng, something fora name, popularity, rating = 20-24 bytes
