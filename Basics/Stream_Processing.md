@@ -8,7 +8,7 @@
 
 # Message Brokers:
 * A type of database that handels streaming, both producers and consumers can connect to it. Typically puts messages in a queue if there are many of them
-* Some will keep messages dirably, others will delete them after they are successully consumed.
+* Some will keep messages durably, others will delete them after they are successully consumed.
 * Two delivery patterns: 
     * Fan Out - send message to all consumers
     * Load Balancing - one message per consumer
@@ -24,7 +24,7 @@
     * Log can be partitioned and replicated to improve performance and fault tolerance
     * Producer based on a hash function can put messages to proper partition
     * By having One Partition per Consumer we can make sure all messages will be handled in proper order
-        * One hard to handle/process message ca slow down partition processing
+        * One hard to handle/process message can slow down partition processing
 # Common Uses of Streams:
 * Logging and Metrics
 * Change Data Capture
