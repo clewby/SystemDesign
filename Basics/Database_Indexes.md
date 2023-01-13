@@ -28,3 +28,5 @@
     * Range queries
 * Cons:
     * Not fast inserts
+
+![B-tree](../Designs/assets/b-tree.jpg)
