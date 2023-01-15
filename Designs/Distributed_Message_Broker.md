@@ -43,4 +43,4 @@
 
 
 
-![This is an image](assets/distributed_message_broker.jpg) Option 1
+![This is an image](assets/distributed_message_broker.jpg)
